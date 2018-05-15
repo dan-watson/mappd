@@ -18,14 +18,15 @@ RSpec.describe Person, type: :model do
                                                scale: 10,
                                                null: true)
   }
+  it { should_not have_db_column(:external_id) }
   it {
-    should have_db_column(:external_id).of_type(:string)
-                                       .with_options(length: 10)
+    should have_db_column(:e_id).of_type(:string)
+                                .with_options(length: 10)
   }
 
   it { should have_db_column(:country_id).of_type(:integer) }
   it { should have_db_index(:country_id) }
-  it { should have_db_index(:external_id) }
+  it { should have_db_index(:e_id) }
 
   context '#change column' do
     before(:all) do

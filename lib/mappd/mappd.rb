@@ -8,6 +8,10 @@ module Mappd
       commands << [:add_index, [table_name, name, options]]
     end
 
+    def rename(from, to)
+      commands << [:rename_column, [table_name, from, to]]
+    end
+
     def field(name, type = :string, options = {})
       commands << [:add_column, [table_name, name, type, options]]
     end

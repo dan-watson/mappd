@@ -4,12 +4,15 @@ class Person < ActiveRecord::Base
   field :name, :string, null: false, default: ''
   field :age, :integer
   field :score, :decimal, precision: 10, scale: 10, null: true
+
   field :external_id, :string, length: 10
+  rename :external_id, :e_id
+  field :e_id, :string, length: 10
 
   belongs_to :country
   has_and_belongs_to_many :roles
 
-  index :external_id
+  index :e_id
 
   timestamps
 end
