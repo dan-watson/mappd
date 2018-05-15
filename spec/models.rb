@@ -10,6 +10,7 @@ class Person < ActiveRecord::Base
   field :e_id, :string, length: 10
 
   belongs_to :country
+  has_many :pictures, as: :imageable
   has_and_belongs_to_many :roles
 
   index :e_id
@@ -17,8 +18,13 @@ class Person < ActiveRecord::Base
   timestamps
 end
 
+class Picture < ActiveRecord::Base
+  belongs_to :imageable, polymorphic: true
+end
+
 class Country < ActiveRecord::Base
   field :name, :string
+  has_many :pictures, as: :imageable
 end
 
 class Role < ActiveRecord::Base
@@ -29,3 +35,4 @@ end
 Person.migrate!
 Country.migrate!
 Role.migrate!
+Picture.migrate!

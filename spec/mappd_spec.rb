@@ -37,3 +37,8 @@ RSpec.describe Person, type: :model do
     it { should have_db_column(:age).of_type(:string) }
   end
 end
+
+RSpec.describe Picture, type: :model do
+  it { should have_db_column(:imageable_id).of_type(:integer) }
+  it { should have_db_column(:imageable_type).of_type(:string) }
+end

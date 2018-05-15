@@ -1,6 +1,6 @@
 # README
 
-Mappd is a replacement gem for [mini_record](https://github.com/DAddYE/mini_record). Mini record is great and I have been using it for a number of years. Unfortunately the mini_record report has not been updated in some time. With recent rails upgrades mini_record is not working well.
+Mappd is a replacement gem for [mini_record](https://github.com/DAddYE/mini_record). Mini record is great and I have been using it for a number of years. Unfortunately the mini_record repo has not been updated in some time. With recent rails upgrades mini_record is not working well.
 
 Mappd is designed to work with ActiveRecord 5.2 >.
 
@@ -21,6 +21,8 @@ class Person < ActiveRecord::Base
   # Hooks into belongs_to and creates a country_id column
   # with an index
   belongs_to :country
+
+  has_many :pictures, as: :imageable
   
   # Creates a join table people_roles
   has_and_belongs_to_many :roles
@@ -32,8 +34,14 @@ class Person < ActiveRecord::Base
   timestamps
 end
 
+class Picture < ActiveRecord::Base
+  # Creates a imageable_id and imageable_type
+  belongs_to :imageable, polymorphic: true
+end
+
 class Country < ActiveRecord::Base
   field :name, :string
+  has_many :pictures, as: :imageable
 end
 
 class Role < ActiveRecord::Base
