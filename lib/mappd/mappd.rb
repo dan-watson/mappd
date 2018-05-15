@@ -47,11 +47,25 @@ module Mappd
 
     def execute_commands!
       commands.each do |command|
-        connection.send(command[0], *command[1])
+        if column_exists?(command)
+          connection.send(:change_column, *command[1])
+        else
+          connection.send(command[0], *command[1])
+        end
       rescue ActiveRecord::StatementInvalid => e
         warn(e)
       end
+      reset!
+    end
+
+    def reset!
+      reset_column_information
       @commands = []
+    end
+
+    def column_exists?(command)
+      command[0] == :add_column &&
+        connection.column_exists?(table_name, command[1][1])
     end
 
     def warn(message)

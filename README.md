@@ -1,7 +1,5 @@
 # README
 
-**Note - Not production ready yet** 
-
 Mappd is a replacement gem for [mini_record](https://github.com/DAddYE/mini_record). Mini record is great and I have been using it for a number of years. Unfortunately the mini_record report has not been updated in some time. With recent rails upgrades mini_record is not working well.
 
 Mappd is designed to work with ActiveRecord 5.2 >.
@@ -42,4 +40,3 @@ Hey presto your database has been created with the correct schema.
 ## Todo
 
 * Renaming a column
-* Changing column options
