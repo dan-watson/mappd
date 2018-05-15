@@ -1,3 +1,3 @@
 module Mappd
-  VERSION = '0.0.1.beta'.freeze
+  VERSION = '0.0.1'.freeze
 end
