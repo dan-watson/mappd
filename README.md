@@ -1,4 +1,4 @@
-# README
+# Mappd
 
 [![Build Status](https://travis-ci.org/dan-watson/mappd.svg?branch=master)](https://travis-ci.org/dan-watson/mappd)
 
@@ -7,6 +7,20 @@ Mappd is a replacement gem for [mini_record](https://github.com/DAddYE/mini_reco
 Mappd is designed to work with ActiveRecord 5.2 >.
 
 It's simple to use.
+
+## Setup
+
+```
+  gem install mappd
+```
+
+Or add to your `Gemfile`:
+
+```
+  gem 'mappd'
+```
+
+## Models
 
 ```ruby
 class Person < ActiveRecord::Base
