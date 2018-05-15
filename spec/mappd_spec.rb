@@ -1,4 +1,3 @@
-require 'byebug'
 require File.expand_path('boot.rb', __dir__)
 require File.expand_path('spec_helper.rb', __dir__)
 require File.expand_path('models.rb', __dir__)

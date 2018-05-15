@@ -24,7 +24,8 @@ module Mappd
       reflect_on_all_associations.each do |association|
         case association.macro
         when :belongs_to
-          commands << [:add_reference, [table_name, association.name, association.options]]
+          commands << [:add_reference,
+                       [table_name, association.name, association.options]]
         when :has_and_belongs_to_many
           commands << [:create_join_table,
                        [table_name.to_sym, association.name]]
