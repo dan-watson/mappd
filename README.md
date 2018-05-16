@@ -72,7 +72,7 @@ Role.migrate!
 
 Hey presto your database has been created with the correct schema.
 
-# Types & Options - Field
+## Types & Options - Field
 
 ```field :name, :type, options = {}```
 
@@ -108,5 +108,15 @@ Available options are (none of these exists by default):
 
 ```:comment``` - Specifies the comment for the column. This option is ignored by some backends.
 
+## Using Rails?
 
+Create a `mappd.rb` initializer inside `config/initializers` and add the following code to auto migrate rails models on every application restart.
 
+```ruby
+  Dir.glob('app/models/**/*.rb').each do |file_path|
+    basename = File.basename(file_path, File.extname(file_path))
+    clazz = basename.camelize.constantize
+    next if clazz.abstract_class
+    clazz.migrate! if clazz.ancestors.include?(ActiveRecord::Base)
+  end
+```
