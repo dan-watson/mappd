@@ -31,9 +31,22 @@ RSpec.describe Person, type: :model do
     before(:all) do
       Person.field(:age, :string)
       Person.migrate!
+      Person.rename(:age, :ages)
+      Person.migrate!
     end
 
-    it { should have_db_column(:age).of_type(:string) }
+    it { should have_db_column(:ages).of_type(:string) }
+  end
+
+  context '#delete column' do
+    before(:all) do
+      Person.field(:ages, :string)
+      Person.migrate!
+      Person.drop(:ages)
+      Person.migrate!
+    end
+
+    it { should_not have_db_column(:ages).of_type(:string) }
   end
 end
 

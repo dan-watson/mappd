@@ -33,6 +33,9 @@ class Person < ActiveRecord::Base
   field :external_id, :string, length: 10
   rename :external_id, :e_id
   field :e_id, :string, length: 10
+  # Delete a field - the old field and drop could be removed after
+  # migrate! is called
+  drop :name
 
   # Hooks into belongs_to and creates a country_id column
   # with an index

@@ -12,6 +12,10 @@ module Mappd
       commands << [:rename_column, [table_name, from, to]]
     end
 
+    def drop(name)
+      commands << [:remove_column, [table_name, name]]
+    end
+
     def field(name, type = :string, options = {})
       commands << [:add_column, [table_name, name, type, options]]
     end
