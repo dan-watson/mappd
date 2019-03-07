@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'activerecord', '>= 5.2.0'
+gem 'activerecord', '>= 5.2.2'
 gem 'rake'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 
 group :development do
   gem 'byebug'

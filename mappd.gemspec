@@ -1,4 +1,3 @@
-
 $LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'mappd/version'
 
@@ -23,7 +22,5 @@ at you just know in others projects like  DataMapper or MongoMapper.
                     .split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  s.add_dependency 'activerecord', '>=5.2.0'
+  s.add_dependency 'activerecord', '>=5.2.2'
 end
