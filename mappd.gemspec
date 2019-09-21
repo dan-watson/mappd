@@ -22,5 +22,5 @@ at you just know in others projects like  DataMapper or MongoMapper.
                     .split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency 'activerecord', '>=5.2.3'
+  s.add_dependency 'activerecord', '>=6.0.0'
 end
