@@ -123,3 +123,9 @@ Create a `mappd.rb` initializer inside `config/initializers` and add the followi
     clazz.migrate! if clazz.ancestors.include?(ActiveRecord::Base)
   end
 ```
+
+## Donations
+
+Mappd is free to all, but donations are welcome.
+
+Bitcoin: 16HWaWap47gEk641Aim2gN4wp1ZM3eodnz
