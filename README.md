@@ -128,4 +128,4 @@ Create a `mappd.rb` initializer inside `config/initializers` and add the followi
 
 Mappd is free to all, but donations are welcome.
 
-Bitcoin: 16HWaWap47gEk641Aim2gN4wp1ZM3eodnz
+Bitcoin: 3EQRmXmkuje2Ww75Tp47RdinsPusCTLavx
