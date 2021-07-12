@@ -1,4 +1,4 @@
-FROM ruby:2.5-slim
+FROM ruby:2.6-slim
 MAINTAINER dan@paz.am
 ENV REFRESHED_AT 2018-05-14
 

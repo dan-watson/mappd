@@ -21,7 +21,7 @@ module Mappd
     end
 
     def timestamps
-      commands << [:add_timestamps, [table_name, null: true]]
+      commands << [:add_timestamps, [table_name, { null: true }]]
     end
 
     def associations!

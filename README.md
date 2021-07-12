@@ -30,9 +30,9 @@ class Person < ActiveRecord::Base
 
   # Rename a field - the old field and rename could be removed after
   # migrate! is called
-  field :external_id, :string, length: 10
+  field :external_id, :string, limit: 10
   rename :external_id, :e_id
-  field :e_id, :string, length: 10
+  field :e_id, :string, limit: 10
   # Delete a field - the old field and drop could be removed after
   # migrate! is called
   drop :name
@@ -99,7 +99,7 @@ You may use a type not in this list as long as it is supported by your database 
 
 Available options are (none of these exists by default):
 
-```:limit``` - Requests a maximum column length. This is the number of characters for a :string column and number of bytes for :text, :binary and :integer columns. This option is ignored by some backends.
+```:limit``` - Requests a maximum column limit. This is the number of characters for a :string column and number of bytes for :text, :binary and :integer columns. This option is ignored by some backends.
 
 ```:default``` - The column's default value. Use nil for NULL.
 

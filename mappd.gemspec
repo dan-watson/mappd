@@ -23,4 +23,6 @@ at you just know in others projects like  DataMapper or MongoMapper.
   s.require_paths = ['lib']
 
   s.add_dependency 'activerecord', '>=6.0.3'
+
+  s.required_ruby_version = '>= 2.6.0'
 end

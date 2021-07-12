@@ -5,9 +5,9 @@ class Person < ActiveRecord::Base
   field :age, :integer
   field :score, :decimal, precision: 10, scale: 10, null: true
 
-  field :external_id, :string, length: 10
+  field :external_id, :string, limit: 10
   rename :external_id, :e_id
-  field :e_id, :string, length: 10
+  field :e_id, :string, limit: 10
 
   belongs_to :country
   has_many :pictures, as: :imageable

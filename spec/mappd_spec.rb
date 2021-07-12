@@ -20,7 +20,7 @@ RSpec.describe Person, type: :model do
   it { should_not have_db_column(:external_id) }
   it {
     should have_db_column(:e_id).of_type(:string)
-                                .with_options(length: 10)
+                                .with_options(limit: 10)
   }
 
   it { should have_db_column(:country_id).of_type(:integer) }
