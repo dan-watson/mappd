@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mappd (6.1.4)
+    mappd (6.1.4.1)
       activerecord (>= 6.0.3)
 
 GEM

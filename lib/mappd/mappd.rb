@@ -1,3 +1,5 @@
+require 'active_record'
+
 module Mappd
   def self.included(base)
     base.extend(ClassMethods)

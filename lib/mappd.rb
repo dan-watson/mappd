@@ -1,6 +1,6 @@
 require 'rubygems' unless defined?(Gem)
 require 'active_record'
-require 'mappd/mappd'
+require_relative 'mappd/mappd'
 
 module ActiveRecord
   class Base
