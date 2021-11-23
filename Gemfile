@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'activerecord', '>= 6.1.4'
 gem 'rake'
 gem 'sqlite3', '~> 1.4.0'
 

@@ -22,7 +22,7 @@ at you just know in others projects like  DataMapper or MongoMapper.
                     .split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency 'activerecord', '~>6.1.4'
+  s.add_dependency 'activerecord', '~>6.1.4.1'
 
   s.required_ruby_version = '>= 2.6.0'
 end
