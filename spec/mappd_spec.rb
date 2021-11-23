@@ -9,6 +9,7 @@ context '#create table' do
 end
 
 RSpec.describe Person, type: :model do
+  it { should have_db_column(:title).of_type(:string) }
   it { should have_db_column(:name).of_type(:string) }
   it { should have_db_column(:age).of_type(:integer) }
   it {

@@ -1,6 +1,7 @@
 require 'active_record'
 
 class Person < ActiveRecord::Base
+  field :title, :string
   field :name, :string, null: false, default: ''
   field :age, :integer
   field :score, :decimal, precision: 10, scale: 10, null: true
