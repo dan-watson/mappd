@@ -7,7 +7,7 @@ module Mappd
 
   module ClassMethods
     def index(name, options = {})
-      commands << [:add_index, [table_name, name, options]]
+      commands << [:add_index, [table_name, name, { **options }]]
     end
 
     def rename(from, to)
@@ -19,7 +19,7 @@ module Mappd
     end
 
     def field(name, type = :string, options = {})
-      commands << [:add_column, [table_name, name, type, options]]
+      commands << [:add_column, [table_name, name, type, { **options }]]
     end
 
     def timestamps

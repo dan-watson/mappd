@@ -25,4 +25,7 @@ at you just know in others projects like  DataMapper or MongoMapper.
   s.add_dependency 'activerecord', '~>6.1.4.1'
 
   s.required_ruby_version = '>= 2.6.0'
+  s.metadata = {
+    'rubygems_mfa_required' => 'true'
+  }
 end
