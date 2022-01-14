@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/dan-watson/mappd.svg?branch=master)](https://travis-ci.org/dan-watson/mappd)
 
+Mappd will allow you to create/edit/manage columns, directly in your model.
+
 Mappd is a replacement gem for [mini_record](https://github.com/DAddYE/mini_record). Mini record is great and I have been using it for a number of years. Unfortunately the mini_record repo has not been updated in some time. With recent rails upgrades mini_record is not working well.
 
 Mappd is designed to work with ActiveRecord 5.2 >.
